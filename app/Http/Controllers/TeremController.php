@@ -47,7 +47,7 @@ class TeremController extends Controller
      */
     public function show(Terem $terem)
     {
-        //
+        return view('terems.show',['terem' => $terem]);
     }
 
     /**

@@ -11,12 +11,12 @@
         <th>Gép</th>
         @foreach ($terems as $terem)
             <tr>
-                <td>
-                    <a href="{{ route('terems.show', [$terem->id]) }}">{{ $terem->epulet }}</a>
-                </td>
+                <td>{{ $terem->epulet }}</td>
                 <td>{{ $terem->emelet }}</td>
                 <td>{{ $terem->terem }}</td>
-                <td>{{ $terem->gep }}</td>
+                <td>
+                    <a href="{{ route('terems.show', [$terem->id]) }}">{{ $terem->gep }}</a>
+                </td>
                 <td>
                     @include('delete-terem-button', ['teremId'=>$terem->id])
                 </td>
