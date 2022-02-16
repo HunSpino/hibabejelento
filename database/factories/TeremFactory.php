@@ -25,7 +25,3 @@ class TeremFactory extends Factory
     }
 }
 
-/*$table->string('epulet');
-            $table->integer('emelet');
-            $table->integer('terem');
-            $table->string('gep'); */

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Terem;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -21,6 +22,10 @@ return new class extends Migration
             $table->string('gep');
             $table->timestamps();
         });
+
+        Schema::table('hibas', function (Blueprint $table) {
+            $table->foreignIdFor(Terem::class)->constrained();
+        });
     }
 
     /**
@@ -30,6 +35,9 @@ return new class extends Migration
      */
     public function down()
     {
+        Schema::table('hibas', function (Blueprint $table) {
+            $table->dropForeign('hibas_terem_id_foreign');
+        });
         Schema::dropIfExists('terems');
     }
 };
