@@ -15,10 +15,6 @@ return new class extends Migration
     {
         Schema::create('hibas', function (Blueprint $table) {
             $table->id();
-            $table->string('epulet');
-            $table->integer('emelet');
-            $table->integer('terem');
-            $table->integer('gep');
             $table->timestamps();
         });
     }

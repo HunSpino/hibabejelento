@@ -17,7 +17,15 @@ class TeremFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'epulet' => $this->faker->randomElement(['A','B']),
+            'emelet' => $this->faker->numberBetween(0,3),
+            'terem' => $this->faker->numberBetween(1,23),
+            'gep' => $this->faker->numberBetween(1,50)
         ];
     }
 }
+
+/*$table->string('epulet');
+            $table->integer('emelet');
+            $table->integer('terem');
+            $table->string('gep'); */
