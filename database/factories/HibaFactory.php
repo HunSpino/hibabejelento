@@ -17,7 +17,12 @@ class HibaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'felhasznalo' => $this->faker->name(),
+            'hiba'=> $this->faker->text(),
+            'hibas_terem_id_foreign' => $this->faker->
         ];
     }
 }
+/*$table->string('felhasznalo');
+            $table->string('hiba');
+             */
