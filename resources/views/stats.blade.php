@@ -6,9 +6,9 @@
 <h1>Íme a kezdőoldal</h1>
 <p>Amennyi gépünk van: {{ $gepCount }}</p>
 <p>
-    <a href="{{ route('statues.index') }}">Gépek amink vannak</a>
+    <a href="{{ route('terems.index') }}">Gépek amink vannak</a>
 </p>
 <p>
-    <a href="{{ route('statues.index') }}">Hibabejelentések</a>
+    <a href="{{ route('hibas.index') }}">Hibabejelentések</a>
 </p>
 @endsection

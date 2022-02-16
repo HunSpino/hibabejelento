@@ -14,7 +14,8 @@ class HibaController extends Controller
      */
     public function index()
     {
-        //
+        $hibas = Hiba::orderBy('felhasznalo')->get();
+        return view('hibas.index',['hibas'=>$hibas]);
     }
 
     /**

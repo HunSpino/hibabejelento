@@ -14,7 +14,8 @@ class TeremController extends Controller
      */
     public function index()
     {
-        //
+        $terems = Terem::orderBy('id')->get();
+        return view('terems.index',['terems' =>$terems]);
     }
 
     /**
