@@ -19,10 +19,7 @@ class HibaFactory extends Factory
         return [
             'felhasznalo' => $this->faker->name(),
             'hiba'=> $this->faker->text(),
-            'hibas_terem_id_foreign' => $this->faker->
+            'terem_id' => $this->faker->numberBetween(1,15)
         ];
     }
 }
-/*$table->string('felhasznalo');
-            $table->string('hiba');
-             */
