@@ -25,7 +25,7 @@ class HibaController extends Controller
      */
     public function create()
     {
-        //
+        return view('hibas.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class HibaController extends Controller
      */
     public function show(Hiba $hiba)
     {
-        //
+        return view('hibas.show',['hiba' => $hiba]);
     }
 
     /**
