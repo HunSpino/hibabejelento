@@ -10,6 +10,6 @@ class Hiba extends Model
     use HasFactory;
 
     public function terem() {
-        $this->belongsTo(Terem::class);
+        return $this->belongsTo(Terem::class);
     }
 }

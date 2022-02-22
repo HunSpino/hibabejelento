@@ -5,7 +5,6 @@
 @section('content')
 <h1>{{ $hiba->felhasznalo }} hibajelentése</h1>
 <p>Hiba: {{ $hiba->hiba }}</p>
-<p>A gépe: </p>
-<h2>A {{ $hiba->terem->gep }} gép</h2>
+<p>A gépe: {{ $hiba->terem->gep }}</p>
 <p>@include('delete-hiba-button', ['hibaId'=>$hiba->id])</p>
 @endsection
