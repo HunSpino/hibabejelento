@@ -36,7 +36,11 @@ class TeremController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $adatok = $request->only(['epulet','emelet','terem','gep']);
+        $terem = new Terem();
+        $terem->fill($adatok);
+        $terem->save();
+        return redirect()->route('terems.index');
     }
 
     /**

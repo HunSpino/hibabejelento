@@ -36,7 +36,11 @@ class HibaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $adatok = $request->only(['felhasznalo','hiba','terem_id']);
+        $hiba = new Hiba();
+        $hiba->fill($adatok);
+        $hiba->save();
+        return redirect()->route('hibas.index');
     }
 
     /**

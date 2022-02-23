@@ -21,16 +21,16 @@
             @enderror
         </div>
         <div>
-            Gép: <br>
-            <input type="number" name="gep" value="{{ old('gep') }}">
-            @error('gep')
+            Terem: <br>
+            <input type="number" name="terem" value="{{ old('terem') }}">
+            @error('terem')
                 <p>{{ $message }}</p>
             @enderror
         </div>
         <div>
-            Emelet: <br>
-            <input type="number" name="emelet" value="{{ old('emelet') }}">
-            @error('emelet')
+            Gép: <br>
+            <input type="number" name="gep" value="{{ old('gep') }}">
+            @error('gep')
                 <p>{{ $message }}</p>
             @enderror
         </div>
