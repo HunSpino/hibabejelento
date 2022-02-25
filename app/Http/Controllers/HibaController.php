@@ -62,7 +62,7 @@ class HibaController extends Controller
      */
     public function edit(Hiba $hiba)
     {
-        //
+        return view('hibas.edit',['hiba' => $hiba]);
     }
 
     /**
@@ -74,7 +74,10 @@ class HibaController extends Controller
      */
     public function update(Request $request, Hiba $hiba)
     {
-        //
+        $adatok = $request->only(['felhasznalo','hiba','terem_id']);
+        $hiba->fill($adatok);
+        $hiba->save();
+        return redirect()->route('hibas.show',$hiba->id);
     }
 
     /**

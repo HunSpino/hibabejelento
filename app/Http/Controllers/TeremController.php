@@ -62,7 +62,7 @@ class TeremController extends Controller
      */
     public function edit(Terem $terem)
     {
-        //
+        return view('terems.edit', ['terem' => $terem]);
     }
 
     /**
@@ -74,7 +74,10 @@ class TeremController extends Controller
      */
     public function update(Request $request, Terem $terem)
     {
-        //
+        $adatok = $request->only(['epulet','emelet','terem','gep']);
+        $terem->fill($adatok);
+        $terem->save();
+        return redirect()->route('terems.show', $terem->id);
     }
 
     /**
