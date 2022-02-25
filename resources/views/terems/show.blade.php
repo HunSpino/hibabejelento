@@ -8,4 +8,5 @@
 <p>Emelet: {{ $terem->emelet }}</p>
 <p>Terem: {{ $terem->terem }}</p>
 <p>@include('delete-terem-button', ['teremId'=>$terem->id])</p>
+<p><a href="{{ route('terems.edit', [$terem->id]) }}">Szerkesztés</a></p>
 @endsection

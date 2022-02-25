@@ -3,7 +3,7 @@
 @section('content')
 
 <h1>Jelentés edit</h1>
-    <form method='POST' action="{{ route('edits.update', $hiba->id) }}">
+    <form method='POST' action="{{ route('hibas.update', $hiba->id) }}">
         @method('PATCH')
         @csrf
         <div>

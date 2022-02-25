@@ -20,3 +20,4 @@ Route::get('/', [ HomeController::class, 'index' ])->name('home');
 Route::resource('/terems',TeremController::class);
 Route::resource('/hibas',HibaController::class);
 
+
