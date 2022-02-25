@@ -85,6 +85,7 @@ class HibaController extends Controller
      */
     public function destroy(Hiba $hiba)
     {
-        //
+        $hiba->delete();
+        return redirect()->route('hibas.index');
     }
 }

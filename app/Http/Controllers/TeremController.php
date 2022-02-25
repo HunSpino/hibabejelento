@@ -85,6 +85,7 @@ class TeremController extends Controller
      */
     public function destroy(Terem $terem)
     {
-        //
+        $terem->delete();
+        return redirect()->route('terems.index');
     }
 }
