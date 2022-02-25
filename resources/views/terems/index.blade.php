@@ -24,5 +24,6 @@
         @endforeach
     </tr>
 </table>
+<p><a href="{{ route('terems.create') }}">Új gép adatainak megadása</a></p>
 
 @endsection

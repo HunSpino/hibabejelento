@@ -22,5 +22,7 @@
     </tr>
 
 </table>
+<p><a href="{{ route('hibas.create') }}">Új hibajelentés küldése</a></p>
+
 
 @endsection
